@@ -63,6 +63,12 @@ public class BeanFactory {
         }
     }
 
+//    private void populatePropertiesSet(){
+//        for (Object object : singletons){
+//
+//        }
+//    }
+
 
     public void populatePropertiesSetField() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
 
