@@ -27,8 +27,12 @@ import java.util.stream.Stream;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) throws IOException, URISyntaxException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-        BeanFactory beanFactory = new BeanFactory();
-        beanFactory.instantiateBean("com.kciray");
+        Class<Main> mainClass = Main.class;
+        String s = mainClass.getPackage().getName();
+        BeanFactory beanFactory = new BeanFactory(s);
+        this.getClass().getPackage();
+
+        beanFactory.instantiateBean("");
         beanFactory.populatePropertiesSet();
 
 //        beanFactory.populatePropertiesSetField();
