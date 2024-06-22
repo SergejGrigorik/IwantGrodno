@@ -6,6 +6,7 @@ import com.kciray.dao.impl.DaoImpl;
 import com.kciray.service.ServiceInterface;
 import com.kciray.service.impl.ServiceImpl;
 import org.springframework.beans.annotation.Autowired;
+import org.springframework.beans.factory.ApplicationPropertiesReader;
 import org.springframework.beans.factory.BeanFactory;
 
 import javax.management.MBeanServerFactory;
@@ -28,9 +29,11 @@ public class Main {
     public static void main(String[] args) throws IOException, URISyntaxException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
         BeanFactory beanFactory = new BeanFactory();
         beanFactory.instantiateBean("com.kciray");
-        beanFactory.populatePropertiesSetField();
+        beanFactory.populatePropertiesSet();
+
+//        beanFactory.populatePropertiesSetField();
         beanFactory.injectBeanNames();
-        beanFactory.populatePropertiesSetMethod();
+//        beanFactory.populatePropertiesSetMethod();
 //        beanFactory.populatePropertiesSetFildsInterf();
         ProductService productService = (ProductService) beanFactory.getBean("productService");
         PromotionsService promotionsService1 = productService.getPromotionsService();
@@ -38,6 +41,7 @@ public class Main {
         PromotionsService promotionsService = (PromotionsService) beanFactory.getBean("promotionsService");
         ControllerImpl controller = (ControllerImpl) beanFactory.getBean("controllerImpl");
         DaoImpl daoInterface = (DaoImpl) beanFactory.getBean("daoImpl");
+        System.out.println(daoInterface.getOooo());
         ServiceImpl serviceInterface = (ServiceImpl) beanFactory.getBean("serviceImpl");
         System.out.println(productService+   "    "  +serviceInterface + "   " + daoInterface + "     " + controller);
         System.out.println(serviceInterface.getDaoInterface());

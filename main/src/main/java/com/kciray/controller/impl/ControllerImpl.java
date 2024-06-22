@@ -8,6 +8,7 @@ import org.springframework.beans.annotation.Component;
 
 @Component
 public class ControllerImpl implements ControllerInterface {
+//    @Autowired
         private ServiceInterface serviceInterface;
 
     public ServiceInterface getServiceInterface() {
@@ -30,10 +31,10 @@ public class ControllerImpl implements ControllerInterface {
 //        return serviceImpl;
 //    }
 //
-    @Autowired
-    public ControllerImpl(ServiceInterface serviceInterface) {
-        this.serviceInterface = serviceInterface;
-    }
+//    @Autowired
+//    public ControllerImpl(ServiceInterface serviceInterface) {
+//        this.serviceInterface = serviceInterface;
+//    }
 
     @Override
     public void execute() {

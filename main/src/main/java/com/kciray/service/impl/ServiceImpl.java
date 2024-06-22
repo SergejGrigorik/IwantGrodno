@@ -7,13 +7,13 @@ import org.springframework.beans.annotation.Autowired;
 import org.springframework.beans.annotation.Component;
 @Component
 public class ServiceImpl implements ServiceInterface {
-    @Autowired
+//    @Autowired
     private DaoInterface daoInterface;
 
     public DaoInterface getDaoInterface() {
         return daoInterface;
     }
-//    @Autowired
+   @Autowired
 
     public void setDaoInterface(DaoInterface daoInterface) {
         this.daoInterface = daoInterface;
