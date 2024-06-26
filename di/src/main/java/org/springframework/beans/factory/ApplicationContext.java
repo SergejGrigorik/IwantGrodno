@@ -27,7 +27,6 @@ public class ApplicationContext {
     }
     public <T> T getObject(Class<T> type) throws InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchMethodException {
 
-
         if (cache.containsKey(type)) {
 
             return (T) cache.get(type);
