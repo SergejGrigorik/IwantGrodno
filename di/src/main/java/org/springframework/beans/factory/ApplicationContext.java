@@ -29,7 +29,6 @@ public class ApplicationContext {
 
         if (cache.containsKey(type)) {
 
-
             return (T) cache.get(type);
         }
 
