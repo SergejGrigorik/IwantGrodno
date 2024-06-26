@@ -23,6 +23,8 @@ public class ApplicationContext {
         Set<Class<?>> classesWithAnnatationComponent = packagesReader.getClassesWithAnnatationComponent();
         for (Class<?> clazz : classesWithAnnatationComponent) {
             getObject(clazz);
+
+
         }
     }
     public <T> T getObject(Class<T> type) throws InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchMethodException {
