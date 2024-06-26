@@ -9,8 +9,6 @@ public class Main {
         Class<Main> mainClass = Main.class;
         String s = mainClass.getPackage().getName();
         ApplicationContext application = Application.run(s);
-
-
         application.getObject(ControllerInterface.class).execute();
 
 
