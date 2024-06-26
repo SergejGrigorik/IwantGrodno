@@ -25,8 +25,6 @@ public class ApplicationContext {
             getObject(clazz);
         }
     }
-
-
     public <T> T getObject(Class<T> type) throws InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchMethodException {
 
 
