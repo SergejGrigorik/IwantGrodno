@@ -2,8 +2,8 @@ package com.kciray.dao.impl;
 
 import com.kciray.ParametersHolder;
 import com.kciray.dao.DaoInterface;
-import org.springframework.beans.annotation.Autowired;
-import org.springframework.beans.annotation.Component;
+import org.springframework.annotation.Component;
+import org.springframework.postprocessor.autowired.annotation.Autowired;
 
 
 @Component
