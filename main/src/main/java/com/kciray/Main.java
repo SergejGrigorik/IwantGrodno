@@ -10,6 +10,7 @@ public class Main {
         String s = mainClass.getPackage().getName();
         ApplicationContext application = Application.run(s);
         application.getObject(Controller.class).execute();
+        
     }
 }
 
