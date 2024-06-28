@@ -1,10 +1,9 @@
-package org.springframework.beans.factory;
+package org.springframework.factory;
 
-import org.springframework.beans.scanner.PackagesReaderWithReflection;
+import org.springframework.scanner.PackagesReaderWithReflection;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
-import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class ApplicationContext {
@@ -19,12 +18,7 @@ public class ApplicationContext {
 
     }
 
-    public void createSingletonsWithAnnatationComponent() throws Exception {
-        Set<Class<?>> classesWithAnnatationComponent = packagesReader.getClassesWithAnnatationComponent();
-        for (Class<?> clazz : classesWithAnnatationComponent) {
-            getObject(clazz);
-        }
-    }
+
     public <T> T getObject(Class<T> type) throws InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchMethodException {
 
         if (cache.containsKey(type)) {
@@ -36,7 +30,7 @@ public class ApplicationContext {
         Class<? extends T> implClass = type;
 
         if (type.isInterface()) {
-            implClass = getPackagesReaderWithReflection().getImplClass(type);
+            implClass = packagesReader.getCashClassImpl(type);
         }
 
 

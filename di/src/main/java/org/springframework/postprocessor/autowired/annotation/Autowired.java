@@ -1,9 +1,9 @@
-package org.springframework.beans.annotation;
+package org.springframework.postprocessor.autowired.annotation;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Value {
-    String name() default "";
+public @interface Autowired {
+
 }

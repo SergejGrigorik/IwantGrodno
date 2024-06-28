@@ -1,9 +1,9 @@
 package org.springframework;
 
 
-import org.springframework.beans.factory.ApplicationContext;
-import org.springframework.beans.factory.ObjectFactory;
-import org.springframework.beans.scanner.PackagesReaderWithReflection;
+import org.springframework.factory.ApplicationContext;
+import org.springframework.factory.ObjectFactory;
+import org.springframework.scanner.PackagesReaderWithReflection;
 
 public class Application {
     public static ApplicationContext run(String packageToScan) throws Exception {
@@ -13,8 +13,6 @@ public class Application {
 
 
         applicationContext.setObjectFactory(objectFactory);
-        applicationContext.createSingletonsWithAnnatationComponent();
-
         return applicationContext;
     }
 

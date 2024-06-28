@@ -1,12 +1,12 @@
 package com.kciray;
 
-import org.springframework.beans.annotation.Value;
+import org.springframework.postprocessor.value.interfaces.Value;
 
 public class ParametersHolder {
-    @Value(name = "my.love")
+    @Value(name = "my.param.db")
     private String someText;
 
-    public String getSomeText(){
+    public String getSomeText() {
         return someText;
-    };
+    }
 }

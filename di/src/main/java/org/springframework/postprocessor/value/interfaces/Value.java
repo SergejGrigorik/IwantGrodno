@@ -1,8 +1,9 @@
-package org.springframework.beans.annotation;
+package org.springframework.postprocessor.value.interfaces;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Component {
+public @interface Value {
+    String name() default "";
 }

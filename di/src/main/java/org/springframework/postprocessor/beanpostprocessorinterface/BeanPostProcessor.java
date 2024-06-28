@@ -1,6 +1,6 @@
-package org.springframework.beans.interfaces;
+package org.springframework.postprocessor.beanpostprocessorinterface;
 
-import org.springframework.beans.factory.ApplicationContext;
+import org.springframework.factory.ApplicationContext;
 
 import java.lang.reflect.InvocationTargetException;
 
