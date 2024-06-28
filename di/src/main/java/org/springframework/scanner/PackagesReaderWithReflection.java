@@ -37,6 +37,7 @@ public class PackagesReaderWithReflection {
             Class<?>[] interfaces = clazz.getInterfaces();
             for (Class<?> interf : interfaces) {
                 cashClassImpl.put(interf, clazz);
+
 //                Очень хотел через stream сделать в одну строчку , немного не получалось , сегодня выделю вечер на стримы и лямбды . Хочу красиво делать , как ты показывал
             }
         }
